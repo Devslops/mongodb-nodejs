@@ -14,7 +14,7 @@ db.once("open", function() {
 
 
 router.get('/resto', (req,res) => { 
-    var collection = db.collection('resto');
+    var collection = db.collection('resto'); 
       
     collection.find({}).toArray(function(err, resto) {
         if(err != null) res.json({"erreur": err})
